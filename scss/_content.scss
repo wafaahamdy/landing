@@ -1,0 +1,90 @@
+.brief {
+    padding: 1rem 0 ;
+    &_number{
+        font-size: 8rem;
+        font-weight: 700;
+        font-family: $font-heading;
+        margin: .8rem auto;
+    }
+
+    &_note{
+        font-size: 2rem;
+        color: $color-light-grey ;
+        font-weight: 700;
+    }
+}
+
+
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: auto ;
+    grid-gap: 7rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+   
+    padding: 4rem 3rem;
+   
+
+    @media (max-width : $size-mobile)  {
+      grid-template-columns:  1fr;
+      &_image{   grid-row: 1/2;  }
+    }
+
+
+    &-blue {
+        margin: 15rem auto;
+       background-color: $color-Pale-Blue;
+       &::after , &::before {
+           content: "";
+           background-repeat: no-repeat;
+           height: 14rem;
+           position: absolute;
+           left:0 ;
+           width: 100%;
+       }
+
+        &::before{  top: -13.5rem;   }
+        &::after{ bottom:-13.5rem ;  }
+         
+        &-1{
+          &::before{background: url('../images/bg-section-top-desktop-1.svg'); }
+         &::after{ background: url('../images/bg-section-bottom-desktop-1.svg')  ;} 
+        }
+
+
+        &-2{
+            &::before{background: url('../images/bg-section-top-desktop-2.svg'); }
+           &::after{ background: url('../images/bg-section-bottom-desktop-2.svg')  ;} 
+          }
+      
+  @media (max-width:$size-mobile) {
+    &::before{  top: -10.5rem; 
+    height: 11rem;  }
+    &::after{ bottom:-10.5rem ; height: 11rem; }
+    &-1{
+        &::before{background: url('../images/bg-section-top-mobile-2.svg'); }
+       &::after{ background: url('../images/bg-section-bottom-mobile-2.svg')  ;} 
+      }
+
+
+      &-2{
+          &::before{background: url('../images/bg-section-top-mobile-2.svg'); }
+         &::after{ background: url('../images/bg-section-bottom-mobile-2.svg')  ;} 
+        }
+  }
+
+      }
+     
+        
+ }    
+
+
+
+ .ask{
+     text-align: center;
+     margin: 10rem auto;
+ }
